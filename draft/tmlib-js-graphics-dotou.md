@@ -3,3 +3,4 @@
 
 ## 基本
 - [Canvas インスタンスを生成しよう](../samples/tmlib.js/graphics/sample.html)
+- [Canvas インスタンスを生成しよう](../samples/tmlib.js/graphics/sample.html)
