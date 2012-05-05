@@ -5,3 +5,5 @@
 // canvas インスタンス生成
 var canvas = tm.graphics.Canvas("#world");
 
+// 幅を指定
+canvas.width = 465;
