@@ -5,4 +5,4 @@ tmlife-storage-private
 
 
 ## Sample
-- <samples/less-guide/index.html>
+- <http://phi1618.github.com/tmlife-storage-private/samples/less-guide/>
