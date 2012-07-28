@@ -1,0 +1,22 @@
+@bg-color: red;
+@size: 1.618px;
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: @bg-color;
+}
+
+#box1 {
+  width: round(@size)*100;  // 2
+}
+#box2 {
+  width: ceil(@size)*100;   // 2
+}
+#box3 {
+  width: floor(@size)*100;  // 1
+}
+#box4 {
+  width: percentage(0.5);   // 50%
+}

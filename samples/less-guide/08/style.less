@@ -1,0 +1,24 @@
+@bg-color: red;
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: @bg-color;
+}
+
+header {
+  @bg-color: green;
+  
+  .box {
+    background-color: @bg-color;
+  }
+}
+
+section {
+  @bg-color: blue;
+  
+  .box {
+    background-color: @bg-color;
+  }
+}
