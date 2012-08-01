@@ -157,7 +157,9 @@ var circleList = [];
 var setupBackground = function() {
     var eBG = tm.dom.Element("#background");
     
-    for (var i=0; i<512; ++i) {
+    
+    
+    var intervalID = setInterval(function() {
         var eCircle = eBG.create("div");
         eCircle.getElement().setAttribute("class", "circle");
         
@@ -171,13 +173,18 @@ var setupBackground = function() {
         
         circleList.push(eCircle);
         
+        
         // 半分は隠しておく
-        if (i > 256) {
+        if (circleList.length > 256) {
             // 隠す
             eCircle.visible = false;
             eCircle.style.set("opacity", 0.0);
         }
-    }
+         
+        if (circleList.length > 512) {
+            clearInterval(intervalID);
+        }
+    }, 1);
 };
 
 var goal = function() {
