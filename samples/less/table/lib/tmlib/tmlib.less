@@ -1,0 +1,109 @@
+/*
+ * library
+ */
+#tm {
+  
+  .fontface(@name, @filepath, @filename) {
+    font-family: @name;
+    src: url("@{filepath}/@{filename}.eot");
+    src: url("@{filepath}/@{filename}.eot?#iefix") format("embedded-opentype"),
+         url("@{filepath}/@{filename}.woff") format("woff"),
+         url("@{filepath}/@{filename}.ttf") format("truetype"),
+         url("@{filepath}/@{filename}.svg#fontello") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  .visible {
+    visibility: none;
+  }
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  .clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+      display: table;
+      content: "";
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  
+  .size(@size) {
+    width: @size;
+    height: @size;
+  }
+  
+  .size(@width, @height) {
+    width: @width;
+    height: @height;
+  }
+  
+  .box-shadow(@value) {
+    -webkit-box-shadow: @value;
+       -moz-box-shadow: @value;
+         -o-box-shadow: @value;
+            box-shadow: @value;
+  }
+  
+  .box-sizing(@value) {
+    -webkit-box-sizing: @value;
+       -moz-box-sizing: @value;
+         -o-box-sizing: @value;
+            box-sizing: @value;
+  }
+  
+  .transition(@value) {
+    -webkit-transition: @value;
+       -moz-transition: @value;
+         -o-transition: @value;
+            transition: @value;
+  }
+  
+  .rotate(@degree) {
+    -webkit-transform: rotate(@degree);
+       -moz-transform: rotate(@degree);
+         -o-transform: rotate(@degree);
+        -ms-transform: rotate(@degree);
+            transform: rotate(@degree);
+  }
+  
+  .scale(@ratio) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+        -ms-transform: scale(@ratio);
+            transform: scale(@ratio);
+  }
+  
+  .linear-gradient(@args) {
+    background: -webkit-linear-gradient(@arguments);
+    background:    -moz-linear-gradient(@arguments);
+    background:      -o-linear-gradient(@arguments);
+    background:     -ms-linear-gradient(@arguments);
+    background:         linear-gradient(@arguments);
+  }
+  
+  .oily-filter(@color) {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:    -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:      -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:     -ms-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:         linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+  }
+}
+
+

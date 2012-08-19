@@ -1,0 +1,130 @@
+/*
+ * style.less
+ */
+
+/*
+ * tmlib.less
+ * ライブラリです.
+ */
+#tm {
+  
+  .linear-gradient(@args) {
+    background: -webkit-linear-gradient(@arguments);
+    background:    -moz-linear-gradient(@arguments);
+    background:      -o-linear-gradient(@arguments);
+    background:     -ms-linear-gradient(@arguments);
+    background:         linear-gradient(@arguments);
+  }
+  
+  .oily-filter(@color) {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:    -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:      -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:     -ms-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:         linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+  }
+  
+}
+
+
+/*
+ * constant
+ */
+@table-color: hsl(210, 60%, 33%);
+
+
+/*
+ * base
+ */
+body {
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  padding: 10px 0px 20px 50px;
+}
+
+
+/*
+ * 
+ */
+#decoration-table {
+  width: auto;
+  border-spacing: 0;
+  font-size: 14px;
+  
+  tr {
+    background: #fff;
+    
+    &:nth-child(2n+1) {
+      background: lighten(@table-color, 58%);
+    }
+    
+    &:last-child {
+      td {
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+        
+        &:first-child {
+          border-radius: 0px 0px 0px 5px;
+        }
+        &:last-child {
+          border-radius: 0px 0px 5px 0px;
+        }
+      }
+    }
+    
+    &:hover {
+      background: lighten(@table-color, 50%);
+      cursor: pointer;
+    }
+  }
+  
+  th {
+    color: #fff;
+    padding: 8px 15px;
+    background: @table-color;
+    #tm .oily-filter(@table-color);
+    
+    font-weight: bold;
+    border-left: 1px solid @table-color;
+    border-top: 1px solid @table-color;
+    border-bottom: 1px solid @table-color;
+    line-height: 120%;
+    text-align: center;
+    text-shadow: 0px -1px 0px fadeout(@table-color, 10%);
+    box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3) inset;
+    
+    &:first-child {
+      border-radius: 5px 0px 0px 0px;
+    }
+    &:last-child {
+      border-radius: 0px 5px 0px 0px;
+      border-right:1px solid @table-color;
+      box-shadow: 2px 2px 1px rgba(0,0,0,0.1), 0px 1px 1px rgba(255,255,255,0.3) inset;
+    }
+  }
+  
+  td {
+    padding: 8px 15px;
+    border-bottom: 1px solid lighten(@table-color, 37%);
+    border-left: 1px solid lighten(@table-color, 37%);
+    text-align: center;
+    
+    &:last-child {
+      border-right: 1px solid lighten(@table-color, 37%);
+      box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
