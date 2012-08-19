@@ -43,13 +43,15 @@ body {
 
 
 /*
- * 
+ * decoration table
+ * テーブルをデコレーション
  */
 #decoration-table {
   width: auto;
   border-spacing: 0;
   font-size: 14px;
   
+  // 行をデコレーション
   tr {
     background: #fff;
     
@@ -76,6 +78,7 @@ body {
     }
   }
   
+  // テーブルヘッダーをデコレーション
   th {
     color: #fff;
     padding: 8px 15px;
@@ -101,6 +104,7 @@ body {
     }
   }
   
+  // テーブルデータをデコレーション
   td {
     padding: 8px 15px;
     border-bottom: 1px solid lighten(@table-color, 37%);
