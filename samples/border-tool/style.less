@@ -1,0 +1,93 @@
+#tm {
+  .clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+      display: table;
+      content: "";
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  
+  .box-sizing(@box-sizing) {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  .transform-origin(@value) {
+    -webkit-transform-origin: @value;
+       -moz-transform-origin: @value;
+        -ms-transform-origin: @value;
+         -o-transform-origin: @value;
+            transform-origin: @value;
+  }
+  
+  .transition(@value) {
+    -webkit-transition: @value;
+       -moz-transition: @value;
+         -o-transition: @value;
+        -ms-transition: @value;
+            transition: @value;
+  }
+  
+  .scale(@ratio) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+        -ms-transform: scale(@ratio);
+            transform: scale(@ratio);
+  }
+  
+  
+  
+  .oily-filter(@color) {
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:    -moz-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:      -o-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:     -ms-linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+    background:         linear-gradient(top, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.1) 51%, rgba(255, 255, 255, 0.2) 100%), @color;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  .box-sizing(@box-sizing) {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+body {
+  background: #222;
+  color: white;
+  overflow: hidden;
+}
+
+#main {
+}
+
+#border-box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 1px solid white;
+  
+  #tm .transition(500ms);
+}
+
+
+
+
