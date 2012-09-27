@@ -1,0 +1,70 @@
+/*
+ * library
+ */
+#tm {
+  
+  
+  /*
+   * #tm .button
+   * @param   {color} @color    テキストの色
+   * @param   {color} @bg-color 背景色
+   * @param   {size}  @width    幅
+   * @param   {size}  @height   高さ
+   */
+  .button(@color, @bg-color, @width, @height) {
+    
+  }
+  
+}
+
+/*
+ * main
+ */
+
+body {
+  font-family: "Meiryo", "メイリオ", "ヒラギノ角ゴ Pro W3", sans-serif;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+div[class|=button] {
+  //float: left;
+  margin: 10px;
+}
+
+@button-width: 128px;
+@button-height: 32px;
+
+.button-red {
+  #tm .button(white, hsl(0, 80%, 50%), @button-width, @button-height);
+}
+
+.button-yellow {
+  #tm .button(black, hsl(60, 80%, 50%), @button-width, @button-height);
+}
+
+.button-green {
+  #tm .button(white, hsl(120, 80%, 50%), @button-width, @button-height);
+}
+
+.button-cyan {
+  #tm .button(white, hsl(180, 80%, 50%), @button-width, @button-height);
+}
+
+.button-blue {
+  #tm .button(white, hsl(240, 80%, 50%), @button-width, @button-height);
+}
+
+.button-purple {
+  #tm .button(white, hsl(300, 80%, 50%), @button-width, @button-height);
+}
+
+.button-white {
+  #tm .button(black, white, @button-width, @button-height);
+}
+
+.button-black {
+  #tm .button(white, black, @button-width, @button-height);
+}
